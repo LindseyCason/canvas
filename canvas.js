@@ -54,7 +54,7 @@ var colorArray = [
     "#FF3C38"
 ]
 
-window.addEventListener("mousemove", 
+window.addEventListener("touchmove", 
 function(e){
     mouse.x=e.x;
     mouse.y=e.y;
