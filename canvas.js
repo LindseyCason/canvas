@@ -205,9 +205,9 @@ var colorArray = [
 window.addEventListener("touchmove", function(e){
     mouse.x=e.touches[0].clientX;
     mouse.y=e.touches[0].clientY;
-    e.preventDefault();
+    e.stopPropagation();
  
-})
+}, {passive: false})
 
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
