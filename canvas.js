@@ -63,6 +63,7 @@ function(e){
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    init();
 })
 
 
@@ -110,9 +111,13 @@ this.update = function (){
 var circleArray=[];
 
 function init(){
+    circleArray=[];
+
 for(var i =0; i<1500; i++){
-    var x= Math.random() * (innerWidth -radius * 2) + radius;
-    var y= Math.random() * (innerHeight -radius *2) + radius;
+    var x= window.innerHeight/2;
+    // Math.random() * (innerWidth -radius * 2) + radius;
+    var y= window.innerWidth/2;
+    // Math.random() * (innerHeight -radius *2) + radius;
     var dx = (Math.random() -0.5)*8;
     var dy = (Math.random() -0.5)*8;
     var radius = (Math.random() * 3 +1);
