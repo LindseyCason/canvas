@@ -233,11 +233,11 @@ c.fill();
 }
 
 this.update = function (){
-    if(this.x + this.radius > innerWidth 
+    if(this.x + this.radius-50 > innerWidth
         || this.x- this.radius <0){
         this.dx = -this.dx;
     }
-    if(this.y + this.radius > innerHeight 
+    if(this.y + this.radius-50 > innerHeight
         || this.y - this.radius <0){
         this.dy=-this.dy;
     }
@@ -263,10 +263,8 @@ function init(){
     circleArray=[];
 
 for(var i =0; i<1500; i++){
-    var x= window.innerWidth/2;
-    // Math.random() * (innerWidth -radius * 2) + radius;
-    var y= window.innerHeight/2;
-    // Math.random() * (innerHeight -radius *2) + radius;
+    var x= Math.random() * (innerWidth -radius * 2) + radius;
+    var y= Math.random() * (innerHeight -radius *2) + radius;
     var dx = (Math.random() -0.5)*8;
     var dy = (Math.random() -0.5)*8;
     var radius = (Math.random() * 3 +1);
